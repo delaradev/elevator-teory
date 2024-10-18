@@ -1,4 +1,4 @@
-origemimport random
+import random
 
 def criar_predio_com_elevador():
   
@@ -11,24 +11,6 @@ def criar_predio_com_elevador():
   }
 
   return predio, elevador
-
-
-"""def criar_predio_com_elevador():
-  elevador = {
-    "origem": 0,
-    "destino": None,
-    "estado": "ocupado"
-  }
-  predio = {}
-  for andar in range(6):
-    predio[andar] = {
-      "apartamentos": {}
-    }
-    for apartamento in range(1, 4):
-      predio[andar]["apartamentos"][apartamento] = {
-        "estado": "vazio"
-      }
-  return elevador, predio"""
 
 
 def adicionar_pessoa_no_apartamento(predio, andar, apartamento):
@@ -219,7 +201,7 @@ def probabilidade_movimento_por_andar(opcoes, elevador, status):
             probabilidades[andar] = probabilidade_movimentar_destino_andar
       
       elif elevador["estado"] == 1:
-        probabilidade_movimentar_destino_terreo = 0
+        probabilidade_movimentar_destino_terreo = 1
         probabilidades[0] = probabilidade_movimentar_destino_terreo
 
   return probabilidades
