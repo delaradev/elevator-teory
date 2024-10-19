@@ -13,78 +13,6 @@ def criar_predio_com_elevador():
   return predio, elevador
 
 
-def adicionar_pessoa_no_apartamento(predio, andar, apartamento):
-  try:
-    if predio[andar]["apartamentos"][apartamento]["estado"] == "vazio":
-      predio[andar]["apartamentos"][apartamento]["estado"] = "ocupado"
-      print(f"Pessoa adicionada no apartamento {
-        apartamento}, andar {andar}.")
-    else:
-      print(f"O apartamento {apartamento}, andar {
-        andar}, já está ocupado!")
-  except KeyError:
-    print("Andar ou apartamento inválido.")
-
-
-def remover_pessoa_do_apartamento(predio, andar, apartamento):
-  try:
-    if predio[andar]["apartamentos"][apartamento]["estado"] == "ocupado":
-      predio[andar]["apartamentos"][apartamento]["estado"] = "vazio"
-      print(f"Pessoa removida do apartamento {
-        apartamento}, andar {andar}.")
-    else:
-      print(f"O apartamento {apartamento}, andar {
-        andar}, já está vazio!")
-  except KeyError:
-    print("Andar ou apartamento inválido.")
-
-
-def encontrar_apartamento_vazio(predio, andar):
-  for apartamento, info in predio[andar]["apartamentos"].items():
-    if info["estado"] == "vazio":
-      return apartamento
-  return None
-
-
-def encontrar_apartamento_ocupado(predio, andar):
-  for apartamento, info in predio[andar]["apartamentos"].items():
-    if info["estado"] == "ocupado":
-      return apartamento
-  return None
-
-
-def viajar_elevador(elevador, predio, origem, destino):
-  elevador["origem"] = origem
-  elevador["destino"] = destino
-  print(f"\nElevador vai do andar {origem} para o andar {destino}.")
-  if elevador["estado"] == "ocupado":
-    apartamento_origem = encontrar_apartamento_ocupado(predio, origem)
-    apartamento_destino = encontrar_apartamento_vazio(predio, destino)
-    if apartamento_origem is not None:
-      remover_pessoa_do_apartamento(predio, origem, apartamento_origem)
-    if apartamento_destino is not None:
-      adicionar_pessoa_no_apartamento(
-        predio, destino, apartamento_destino)
-    elevador["estado"] = "vazio"
-  elevador["origem"] = destino
-  elevador["destino"] = None
-  print(f"Estado do elevador após a viagem: {elevador}")
-
-
-def chamar_elevador(predio, elevador):
-  destino = sortear_destino_com_probabilidade(predio, elevador)
-  if destino is not None:
-    print(f"\nElevador chamado para o andar {destino}.")
-    viajar_elevador(elevador, predio, elevador["origem"], destino)
-    apartamento = encontrar_apartamento_ocupado(predio, destino)
-    if apartamento is not None:
-      elevador["estado"] = "ocupado"
-    else:
-      elevador["estado"] = "vazio"
-  else:
-    print("Nenhum destino encontrado, ninguém chamou o elevador.")
-
-
 def status_apartamentos(predio):
 
   apartamentos_ocupados_total = 0
@@ -113,6 +41,51 @@ def status_apartamentos(predio):
     "ocupados_por_andar": apartamentos_ocupados_por_andar,
     "vazios_por_andar": apartamentos_vazios_por_andar
   }
+
+
+def adicionar_pessoa_no_apartamento(predio, andar):
+  
+  apartamentos = predio[andar]
+
+  if 0 in apartamentos:
+    apartamento_index = apartamentos.index(0)
+    predio[andar][apartamento_index] = 1
+    print(f"Pessoa alocada no andar {andar}, apartamento {apartamento_index}.")
+  
+  else:
+    print("Todos os apartamentos estão ocupados.")
+
+
+def remover_pessoa_do_apartamento(predio, andar):
+    
+    apartamentos = predio[andar]
+    
+    if 1 in apartamentos:
+      apartamento_index = apartamentos.index(1)
+      predio[andar][apartamento_index] = 0
+      print(f"Pessoa removida do andar {andar}, apartamento {apartamento_index}.")
+    
+    else:
+      print("Nenhuma pessoa para remover, todos os apartamentos estão vazios.")
+
+
+def viajar_elevador(elevador, predio, origem, destino):
+  
+  print(f"\nElevador vai do andar {origem} para o andar {destino}.")
+  
+  if elevador["estado"] == 1:
+    
+    if origem != 0 and destino == 0:
+      remover_pessoa_do_apartamento(predio, origem)
+    
+    elif origem == 0 and destino != 0:
+      adicionar_pessoa_no_apartamento(predio, destino)
+
+  elevador["origem"] = destino
+  elevador["destino"] = None
+  elevador["estado"] = 0
+  
+  print(f"Estado do elevador após a viagem: {elevador}")
 
 
 def calcular_probabilidade_movimento(elevador, status):
@@ -205,3 +178,17 @@ def probabilidade_movimento_por_andar(opcoes, elevador, status):
         probabilidades[0] = probabilidade_movimentar_destino_terreo
 
   return probabilidades
+
+
+"""def chamar_elevador(predio, elevador):
+  destino = sortear_destino_com_probabilidade(predio, elevador)
+  if destino is not None:
+    print(f"\nElevador chamado para o andar {destino}.")
+    viajar_elevador(elevador, predio, elevador["origem"], destino)
+    apartamento = encontrar_apartamento_ocupado(predio, destino)
+    if apartamento is not None:
+      elevador["estado"] = "ocupado"
+    else:
+      elevador["estado"] = "vazio"
+  else:
+    print("Nenhum destino encontrado, ninguém chamou o elevador.")"""
