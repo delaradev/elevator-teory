@@ -49,7 +49,7 @@ def adicionar_pessoa_no_apartamento(predio, andar):
   apartamentos = predio[andar]
 
   if andar == 0:
-    print("O térreo não possui apartamentos.")
+    print("- adicionar_pessoa_no_apartamento() - O térreo não possui apartamentos.")
     return
 
   if 0 in apartamentos:
@@ -66,7 +66,7 @@ def remover_pessoa_do_apartamento(predio, andar):
     apartamentos = predio[andar]
 
     if andar == 0:
-      print("O térreo não possui apartamentos.")
+      print("- remover_pessoa_do_apartamento() - O térreo não possui apartamentos.")
       return
     
     if 1 in apartamentos:
@@ -94,13 +94,13 @@ def viajar_elevador(elevador, predio, destino):
     elevador["andar_atual"] = destino
     elevador["destino"] = None
     elevador["estado"] = 0
-    print(f"- viajar_elevador() - Estado do elevador após a viagem: {elevador}")
+    print(f"- viajar_elevador() - Estado do elevador após a viagem: {elevador}.")
   
   else:
     elevador["andar_atual"] = destino
     elevador["destino"] = None
     elevador["estado"] = 1
-    print(f"- viajar_elevador() - Estado do elevador após a viagem: {elevador}")
+    print(f"- viajar_elevador() - Estado do elevador após a viagem: {elevador}.")
 
 
 def calcular_probabilidade_movimento(elevador, status):
@@ -203,13 +203,13 @@ def sortear_andar_com_probabilidade(probabilidades):
   return resultado
 
 
-def chamar_elevador(predio, elevador, status):
+def simular_viagens(predio, elevador, status):
 
   if (elevador["andar_atual"] == 0) and (elevador["destino"] is None) and (elevador["estado"] == 0):
     elevador["estado"] = 1
 
   print(f"PREDIO - {predio}")
-  print(f"1 - chamar_elevador() - {elevador}")
+  print(f"1 - simular_viagens() - {elevador}")
 
   probabilidade_movimentar, probabilidade_permanecer = calcular_probabilidade_movimento(elevador, status)
   print(f"2 - calcular_probabilidade_movimento() - movimentar: {probabilidade_movimentar}, permanecer: {probabilidade_permanecer}")
@@ -241,4 +241,4 @@ predio, elevador = criar_predio_com_elevador()
 for _ in range(50):
   status = status_apartamentos(predio)
   print(f"\nRODADA {_}")
-  chamar_elevador(predio, elevador, status)
+  simular_viagens(predio, elevador, status)
