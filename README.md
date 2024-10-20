@@ -97,4 +97,4 @@ Para ilustrar a lógica do projeto, considere o seguinte cenário:
     cd elevator-teory
 3. Execute o projeto:
     ```bash
-    python main.py
+    python elevator.py > output.txt

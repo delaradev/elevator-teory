@@ -55,10 +55,10 @@ def adicionar_pessoa_no_apartamento(predio, andar):
   if 0 in apartamentos:
     apartamento_index = apartamentos.index(0)
     predio[andar][apartamento_index] = 1
-    print(f"Pessoa alocada no andar {andar}, apartamento {apartamento_index}.")
+    print(f"- adicionar_pessoa_no_apartamento() - Pessoa alocada no andar {andar}, apartamento {apartamento_index}.")
   
   else:
-    print("Todos os apartamentos estão ocupados.")
+    print("- adicionar_pessoa_no_apartamento() - Todos os apartamentos estão ocupados.")
 
 
 def remover_pessoa_do_apartamento(predio, andar):
@@ -72,16 +72,16 @@ def remover_pessoa_do_apartamento(predio, andar):
     if 1 in apartamentos:
       apartamento_index = apartamentos.index(1)
       predio[andar][apartamento_index] = 0
-      print(f"Pessoa removida do andar {andar}, apartamento {apartamento_index}.")
+      print(f"- remover_pessoa_do_apartamento() - Pessoa removida do andar {andar}, apartamento {apartamento_index}.")
     
     else:
-      print("Nenhuma pessoa para remover, todos os apartamentos estão vazios.")
+      print("- remover_pessoa_do_apartamento() - Nenhuma pessoa para remover, todos os apartamentos estão vazios.")
 
 
 def viajar_elevador(elevador, predio, destino):
 
   origem = elevador["andar_atual"]
-  print(f"\nElevador vai do andar {origem} para o andar {destino}.")
+  print(f"- viajar_elevador() - Elevador vai do andar {origem} para o andar {destino}.")
   
   if elevador["estado"] == 1:
     
@@ -94,10 +94,13 @@ def viajar_elevador(elevador, predio, destino):
     elevador["andar_atual"] = destino
     elevador["destino"] = None
     elevador["estado"] = 0
-    print(f"Estado do elevador após a viagem: {elevador}")
+    print(f"- viajar_elevador() - Estado do elevador após a viagem: {elevador}")
   
   else:
-    print(f"Erro de lógica na função viajar_elevador()")
+    elevador["andar_atual"] = destino
+    elevador["destino"] = None
+    elevador["estado"] = 1
+    print(f"- viajar_elevador() - Estado do elevador após a viagem: {elevador}")
 
 
 def calcular_probabilidade_movimento(elevador, status):
@@ -153,7 +156,7 @@ def probabilidade_movimento_por_andar(elevador, status):
       probabilidade_movimentar_destino_terreo = 0
       probabilidades[0] = probabilidade_movimentar_destino_terreo
       
-      for andar in range(1, len(status["ocupados_por_andar"])):
+      for andar in range(1, len(predio)):
         probabilidade_movimentar_destino_andar = status["ocupados_por_andar"][andar] / status["existentes_total"]
         probabilidades[andar] = probabilidade_movimentar_destino_andar
 
@@ -161,7 +164,7 @@ def probabilidade_movimento_por_andar(elevador, status):
       probabilidade_movimentar_destino_terreo = 0
       probabilidades[0] = probabilidade_movimentar_destino_terreo
       
-      for andar in range(1, len(status["vazios_por_andar"])):
+      for andar in range(1, len(predio)):
         probabilidade_movimentar_destino_andar = status["vazios_por_andar"][andar] / status["existentes_total"]
         probabilidades[andar] = probabilidade_movimentar_destino_andar
 
@@ -174,14 +177,15 @@ def probabilidade_movimento_por_andar(elevador, status):
         probabilidade_movimentar_destino_terreo = 0
         probabilidades[0] = probabilidade_movimentar_destino_terreo
         
-        for andar in range(1, len(status["ocupados_por_andar"])):
+        for andar in range(1, len(predio)):
           probabilidade_movimentar_destino_andar = status["ocupados_por_andar"][andar] / status["existentes_total"]
           probabilidades[andar] = probabilidade_movimentar_destino_andar
       
       else:
-        probabilidade_movimentar_destino_terreo = status["vazios_total"] / status["ocupados_total"]
+        probabilidade_movimentar_destino_terreo = status["vazios_total"] / status["existentes_total"]
+        probabilidades[0] = probabilidade_movimentar_destino_terreo
 
-        for andar in range(1, len(status["ocupados_por_andar"])):
+        for andar in range(1, len(predio)):
           probabilidade_movimentar_destino_andar = status["ocupados_por_andar"][andar] / status["existentes_total"]
           probabilidades[andar] = probabilidade_movimentar_destino_andar
     
@@ -200,24 +204,41 @@ def sortear_andar_com_probabilidade(probabilidades):
 
 
 def chamar_elevador(predio, elevador, status):
-  
+
+  if (elevador["andar_atual"] == 0) and (elevador["destino"] is None) and (elevador["estado"] == 0):
+    elevador["estado"] = 1
+
+  print(f"PREDIO - {predio}")
+  print(f"1 - chamar_elevador() - {elevador}")
+
   probabilidade_movimentar, probabilidade_permanecer = calcular_probabilidade_movimento(elevador, status)
+  print(f"2 - calcular_probabilidade_movimento() - movimentar: {probabilidade_movimentar}, permanecer: {probabilidade_permanecer}")
+
   acao = sortear_movimento_com_probabilidade(probabilidade_movimentar, probabilidade_permanecer)
+  print(f"3 - sortear_movimento_com_probabilidade() - {acao}")
 
   if acao == "movimentar":
+    
     probabilidades = probabilidade_movimento_por_andar(elevador, status)
+    print(f"4 - probabilidade_movimento_por_andar() -  {probabilidades}")
+    
     destino = sortear_andar_com_probabilidade(probabilidades)
+    print(f"5 - sortear_andar_com_probabilidade() - {destino}")
+    
     viajar_elevador(elevador, predio, destino)
+    print("FIM DA RODADA")
+    print("---"*50)
   
   elif acao == "permanecer":
-    print("Deu ruim aqui meu amigo")
+    print("PERMANCER")
+    print("FIM DA RODADA\n")
+    print("---"*50)
 
 
 
-
-
+predio, elevador = criar_predio_com_elevador()
 
 for _ in range(50):
-  predio, elevador = criar_predio_com_elevador()
   status = status_apartamentos(predio)
+  print(f"\nRODADA {_}")
   chamar_elevador(predio, elevador, status)
