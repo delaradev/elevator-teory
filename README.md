@@ -91,10 +91,10 @@ Para ilustrar a lógica do projeto, considere o seguinte cenário:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/delaradev/elevator-teory.git
+   git clone https://github.com/delaradev/elevator-theory.git
 2. Navegue até o diretório do projeto:
     ```bash
-    cd elevator-teory
+    cd elevator-theory
 3. Execute o projeto:
     ```bash
-    python elevator.py > output.txt
+    python main.py > output.txt

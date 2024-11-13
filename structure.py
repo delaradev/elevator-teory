@@ -78,31 +78,6 @@ def remover_pessoa_do_apartamento(predio, andar):
       print("- remover_pessoa_do_apartamento() - Nenhuma pessoa para remover, todos os apartamentos estão vazios.")
 
 
-def viajar_elevador(elevador, predio, destino):
-
-  origem = elevador["andar_atual"]
-  print(f"- viajar_elevador() - Elevador vai do andar {origem} para o andar {destino}.")
-  
-  if elevador["estado"] == 1:
-    
-    if origem != 0 and destino == 0:
-      remover_pessoa_do_apartamento(predio, origem)
-    
-    elif origem == 0 and destino != 0:
-      adicionar_pessoa_no_apartamento(predio, destino)
-    
-    elevador["andar_atual"] = destino
-    elevador["destino"] = None
-    elevador["estado"] = 0
-    print(f"- viajar_elevador() - Estado do elevador após a viagem: {elevador}.")
-  
-  else:
-    elevador["andar_atual"] = destino
-    elevador["destino"] = None
-    elevador["estado"] = 1
-    print(f"- viajar_elevador() - Estado do elevador após a viagem: {elevador}.")
-
-
 def calcular_probabilidade_movimento(elevador, status):
 
   probabilidade_movimentar = 0
@@ -197,13 +172,49 @@ def probabilidade_movimento_por_andar(elevador, status):
 
 
 def sortear_andar_com_probabilidade(probabilidades):
+  
   opcoes = list(probabilidades.keys())
   probabilidades_lista = list(probabilidades.values())
   resultado = random.choices(opcoes, probabilidades_lista)[0]
   return resultado
 
 
+def viajar_elevador(elevador, predio, destino):
+
+  dados_viagem_elevador = []
+
+  origem = elevador["andar_atual"]
+  print(f"- viajar_elevador() - Elevador vai do andar {origem} para o andar {destino}.")
+  
+  if elevador["estado"] == 1:
+    
+    if origem != 0 and destino == 0:
+      remover_pessoa_do_apartamento(predio, origem)
+    
+    elif origem == 0 and destino != 0:
+      adicionar_pessoa_no_apartamento(predio, destino)
+    
+    elevador["andar_atual"] = destino
+    elevador["destino"] = None
+    elevador["estado"] = 0
+    print(f"- viajar_elevador() - Estado do elevador após a viagem: {elevador}.")
+  
+    dados_viagem_elevador = [origem, destino, elevador["estado"]]
+  
+  else:
+    elevador["andar_atual"] = destino
+    elevador["destino"] = None
+    elevador["estado"] = 1
+    print(f"- viajar_elevador() - Estado do elevador após a viagem: {elevador}.")
+
+    dados_viagem_elevador = [origem, destino, elevador["estado"]]
+  
+  return dados_viagem_elevador
+
+
 def simular_viagens(predio, elevador, status):
+
+  dados_viagem = []
 
   if (elevador["andar_atual"] == 0) and (elevador["destino"] is None) and (elevador["estado"] == 0):
     elevador["estado"] = 1
@@ -225,20 +236,24 @@ def simular_viagens(predio, elevador, status):
     destino = sortear_andar_com_probabilidade(probabilidades)
     print(f"5 - sortear_andar_com_probabilidade() - {destino}")
     
-    viajar_elevador(elevador, predio, destino)
+    dados_viagem = viajar_elevador(elevador, predio, destino)
     print("FIM DA RODADA")
     print("---"*50)
   
   elif acao == "permanecer":
-    print("PERMANCER")
-    print("FIM DA RODADA\n")
+    print("FIM DA RODADA")
     print("---"*50)
 
+  return dados_viagem
 
 
 predio, elevador = criar_predio_com_elevador()
+  
+dados_viagem = {}
 
 for _ in range(50):
   status = status_apartamentos(predio)
   print(f"\nRODADA {_}")
-  simular_viagens(predio, elevador, status)
+  dados_viagem[_] = simular_viagens(predio, elevador, status)
+
+print (f"\n\n\nDADOS VIAGEM{dados_viagem}")

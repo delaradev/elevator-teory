@@ -1,0 +1,594 @@
+
+RODADA 0
+PREDIO - [[], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 0, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0, 1: 0.2, 2: 0.2, 3: 0.2, 4: 0.2, 5: 0.2}
+5 - sortear_andar_com_probabilidade() - 3
+- viajar_elevador() - Elevador vai do andar 0 para o andar 3.
+- adicionar_pessoa_no_apartamento() - Pessoa alocada no andar 3, apartamento 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 3, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 1
+PREDIO - [[], [0, 0, 0], [0, 0, 0], [1, 0, 0], [0, 0, 0], [0, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 3, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0.9333333333333333, 1: 0.0, 2: 0.0, 3: 0.06666666666666667, 4: 0.0, 5: 0.0}
+5 - sortear_andar_com_probabilidade() - 0
+- viajar_elevador() - Elevador vai do andar 3 para o andar 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 0, 'destino': None, 'estado': 1}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 2
+PREDIO - [[], [0, 0, 0], [0, 0, 0], [1, 0, 0], [0, 0, 0], [0, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 0, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0, 1: 0.2, 2: 0.2, 3: 0.13333333333333333, 4: 0.2, 5: 0.2}
+5 - sortear_andar_com_probabilidade() - 5
+- viajar_elevador() - Elevador vai do andar 0 para o andar 5.
+- adicionar_pessoa_no_apartamento() - Pessoa alocada no andar 5, apartamento 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 5, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 3
+PREDIO - [[], [0, 0, 0], [0, 0, 0], [1, 0, 0], [0, 0, 0], [1, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 5, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0.8666666666666667, 1: 0.0, 2: 0.0, 3: 0.06666666666666667, 4: 0.0, 5: 0.06666666666666667}
+5 - sortear_andar_com_probabilidade() - 0
+- viajar_elevador() - Elevador vai do andar 5 para o andar 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 0, 'destino': None, 'estado': 1}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 4
+PREDIO - [[], [0, 0, 0], [0, 0, 0], [1, 0, 0], [0, 0, 0], [1, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 0, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0, 1: 0.2, 2: 0.2, 3: 0.13333333333333333, 4: 0.2, 5: 0.13333333333333333}
+5 - sortear_andar_com_probabilidade() - 1
+- viajar_elevador() - Elevador vai do andar 0 para o andar 1.
+- adicionar_pessoa_no_apartamento() - Pessoa alocada no andar 1, apartamento 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 1, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 5
+PREDIO - [[], [1, 0, 0], [0, 0, 0], [1, 0, 0], [0, 0, 0], [1, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 1, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - permanecer
+PERMANCER
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 6
+PREDIO - [[], [1, 0, 0], [0, 0, 0], [1, 0, 0], [0, 0, 0], [1, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 1, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0.8, 1: 0.06666666666666667, 2: 0.0, 3: 0.06666666666666667, 4: 0.0, 5: 0.06666666666666667}
+5 - sortear_andar_com_probabilidade() - 3
+- viajar_elevador() - Elevador vai do andar 1 para o andar 3.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 3, 'destino': None, 'estado': 1}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 7
+PREDIO - [[], [1, 0, 0], [0, 0, 0], [1, 0, 0], [0, 0, 0], [1, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 3, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 1}
+5 - sortear_andar_com_probabilidade() - 0
+- viajar_elevador() - Elevador vai do andar 3 para o andar 0.
+- remover_pessoa_do_apartamento() - Pessoa removida do andar 3, apartamento 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 0, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 8
+PREDIO - [[], [1, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [1, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 0, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0, 1: 0.13333333333333333, 2: 0.2, 3: 0.2, 4: 0.2, 5: 0.13333333333333333}
+5 - sortear_andar_com_probabilidade() - 4
+- viajar_elevador() - Elevador vai do andar 0 para o andar 4.
+- adicionar_pessoa_no_apartamento() - Pessoa alocada no andar 4, apartamento 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 4, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 9
+PREDIO - [[], [1, 0, 0], [0, 0, 0], [0, 0, 0], [1, 0, 0], [1, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 4, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - permanecer
+PERMANCER
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 10
+PREDIO - [[], [1, 0, 0], [0, 0, 0], [0, 0, 0], [1, 0, 0], [1, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 4, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - permanecer
+PERMANCER
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 11
+PREDIO - [[], [1, 0, 0], [0, 0, 0], [0, 0, 0], [1, 0, 0], [1, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 4, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - permanecer
+PERMANCER
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 12
+PREDIO - [[], [1, 0, 0], [0, 0, 0], [0, 0, 0], [1, 0, 0], [1, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 4, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0.8, 1: 0.06666666666666667, 2: 0.0, 3: 0.0, 4: 0.06666666666666667, 5: 0.06666666666666667}
+5 - sortear_andar_com_probabilidade() - 5
+- viajar_elevador() - Elevador vai do andar 4 para o andar 5.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 5, 'destino': None, 'estado': 1}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 13
+PREDIO - [[], [1, 0, 0], [0, 0, 0], [0, 0, 0], [1, 0, 0], [1, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 5, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 1}
+5 - sortear_andar_com_probabilidade() - 0
+- viajar_elevador() - Elevador vai do andar 5 para o andar 0.
+- remover_pessoa_do_apartamento() - Pessoa removida do andar 5, apartamento 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 0, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 14
+PREDIO - [[], [1, 0, 0], [0, 0, 0], [0, 0, 0], [1, 0, 0], [0, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 0, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0, 1: 0.13333333333333333, 2: 0.2, 3: 0.2, 4: 0.13333333333333333, 5: 0.2}
+5 - sortear_andar_com_probabilidade() - 2
+- viajar_elevador() - Elevador vai do andar 0 para o andar 2.
+- adicionar_pessoa_no_apartamento() - Pessoa alocada no andar 2, apartamento 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 2, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 15
+PREDIO - [[], [1, 0, 0], [1, 0, 0], [0, 0, 0], [1, 0, 0], [0, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 2, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0.8, 1: 0.06666666666666667, 2: 0.06666666666666667, 3: 0.0, 4: 0.06666666666666667, 5: 0.0}
+5 - sortear_andar_com_probabilidade() - 4
+- viajar_elevador() - Elevador vai do andar 2 para o andar 4.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 4, 'destino': None, 'estado': 1}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 16
+PREDIO - [[], [1, 0, 0], [1, 0, 0], [0, 0, 0], [1, 0, 0], [0, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 4, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 1}
+5 - sortear_andar_com_probabilidade() - 0
+- viajar_elevador() - Elevador vai do andar 4 para o andar 0.
+- remover_pessoa_do_apartamento() - Pessoa removida do andar 4, apartamento 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 0, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 17
+PREDIO - [[], [1, 0, 0], [1, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 0, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0, 1: 0.13333333333333333, 2: 0.13333333333333333, 3: 0.2, 4: 0.2, 5: 0.2}
+5 - sortear_andar_com_probabilidade() - 5
+- viajar_elevador() - Elevador vai do andar 0 para o andar 5.
+- adicionar_pessoa_no_apartamento() - Pessoa alocada no andar 5, apartamento 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 5, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 18
+PREDIO - [[], [1, 0, 0], [1, 0, 0], [0, 0, 0], [0, 0, 0], [1, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 5, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0.8, 1: 0.06666666666666667, 2: 0.06666666666666667, 3: 0.0, 4: 0.0, 5: 0.06666666666666667}
+5 - sortear_andar_com_probabilidade() - 0
+- viajar_elevador() - Elevador vai do andar 5 para o andar 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 0, 'destino': None, 'estado': 1}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 19
+PREDIO - [[], [1, 0, 0], [1, 0, 0], [0, 0, 0], [0, 0, 0], [1, 0, 0]]
+1 - simular_viagens() - {'andar_atual': 0, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0, 1: 0.13333333333333333, 2: 0.13333333333333333, 3: 0.2, 4: 0.2, 5: 0.13333333333333333}
+5 - sortear_andar_com_probabilidade() - 5
+- viajar_elevador() - Elevador vai do andar 0 para o andar 5.
+- adicionar_pessoa_no_apartamento() - Pessoa alocada no andar 5, apartamento 1.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 5, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 20
+PREDIO - [[], [1, 0, 0], [1, 0, 0], [0, 0, 0], [0, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 5, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - permanecer
+PERMANCER
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 21
+PREDIO - [[], [1, 0, 0], [1, 0, 0], [0, 0, 0], [0, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 5, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0.7333333333333333, 1: 0.06666666666666667, 2: 0.06666666666666667, 3: 0.0, 4: 0.0, 5: 0.13333333333333333}
+5 - sortear_andar_com_probabilidade() - 0
+- viajar_elevador() - Elevador vai do andar 5 para o andar 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 0, 'destino': None, 'estado': 1}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 22
+PREDIO - [[], [1, 0, 0], [1, 0, 0], [0, 0, 0], [0, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 0, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0, 1: 0.13333333333333333, 2: 0.13333333333333333, 3: 0.2, 4: 0.2, 5: 0.06666666666666667}
+5 - sortear_andar_com_probabilidade() - 3
+- viajar_elevador() - Elevador vai do andar 0 para o andar 3.
+- adicionar_pessoa_no_apartamento() - Pessoa alocada no andar 3, apartamento 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 3, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 23
+PREDIO - [[], [1, 0, 0], [1, 0, 0], [1, 0, 0], [0, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 3, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0.6666666666666666, 1: 0.06666666666666667, 2: 0.06666666666666667, 3: 0.06666666666666667, 4: 0.0, 5: 0.13333333333333333}
+5 - sortear_andar_com_probabilidade() - 0
+- viajar_elevador() - Elevador vai do andar 3 para o andar 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 0, 'destino': None, 'estado': 1}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 24
+PREDIO - [[], [1, 0, 0], [1, 0, 0], [1, 0, 0], [0, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 0, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0, 1: 0.13333333333333333, 2: 0.13333333333333333, 3: 0.13333333333333333, 4: 0.2, 5: 0.06666666666666667}
+5 - sortear_andar_com_probabilidade() - 4
+- viajar_elevador() - Elevador vai do andar 0 para o andar 4.
+- adicionar_pessoa_no_apartamento() - Pessoa alocada no andar 4, apartamento 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 4, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 25
+PREDIO - [[], [1, 0, 0], [1, 0, 0], [1, 0, 0], [1, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 4, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0.6, 1: 0.06666666666666667, 2: 0.06666666666666667, 3: 0.06666666666666667, 4: 0.06666666666666667, 5: 0.13333333333333333}
+5 - sortear_andar_com_probabilidade() - 3
+- viajar_elevador() - Elevador vai do andar 4 para o andar 3.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 3, 'destino': None, 'estado': 1}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 26
+PREDIO - [[], [1, 0, 0], [1, 0, 0], [1, 0, 0], [1, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 3, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 1}
+5 - sortear_andar_com_probabilidade() - 0
+- viajar_elevador() - Elevador vai do andar 3 para o andar 0.
+- remover_pessoa_do_apartamento() - Pessoa removida do andar 3, apartamento 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 0, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 27
+PREDIO - [[], [1, 0, 0], [1, 0, 0], [0, 0, 0], [1, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 0, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0, 1: 0.13333333333333333, 2: 0.13333333333333333, 3: 0.2, 4: 0.13333333333333333, 5: 0.06666666666666667}
+5 - sortear_andar_com_probabilidade() - 2
+- viajar_elevador() - Elevador vai do andar 0 para o andar 2.
+- adicionar_pessoa_no_apartamento() - Pessoa alocada no andar 2, apartamento 1.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 2, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 28
+PREDIO - [[], [1, 0, 0], [1, 1, 0], [0, 0, 0], [1, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 2, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - permanecer
+PERMANCER
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 29
+PREDIO - [[], [1, 0, 0], [1, 1, 0], [0, 0, 0], [1, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 2, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0.6, 1: 0.06666666666666667, 2: 0.13333333333333333, 3: 0.0, 4: 0.06666666666666667, 5: 0.13333333333333333}
+5 - sortear_andar_com_probabilidade() - 4
+- viajar_elevador() - Elevador vai do andar 2 para o andar 4.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 4, 'destino': None, 'estado': 1}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 30
+PREDIO - [[], [1, 0, 0], [1, 1, 0], [0, 0, 0], [1, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 4, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 1}
+5 - sortear_andar_com_probabilidade() - 0
+- viajar_elevador() - Elevador vai do andar 4 para o andar 0.
+- remover_pessoa_do_apartamento() - Pessoa removida do andar 4, apartamento 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 0, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 31
+PREDIO - [[], [1, 0, 0], [1, 1, 0], [0, 0, 0], [0, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 0, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0, 1: 0.13333333333333333, 2: 0.06666666666666667, 3: 0.2, 4: 0.2, 5: 0.06666666666666667}
+5 - sortear_andar_com_probabilidade() - 4
+- viajar_elevador() - Elevador vai do andar 0 para o andar 4.
+- adicionar_pessoa_no_apartamento() - Pessoa alocada no andar 4, apartamento 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 4, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 32
+PREDIO - [[], [1, 0, 0], [1, 1, 0], [0, 0, 0], [1, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 4, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - permanecer
+PERMANCER
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 33
+PREDIO - [[], [1, 0, 0], [1, 1, 0], [0, 0, 0], [1, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 4, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - permanecer
+PERMANCER
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 34
+PREDIO - [[], [1, 0, 0], [1, 1, 0], [0, 0, 0], [1, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 4, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - permanecer
+PERMANCER
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 35
+PREDIO - [[], [1, 0, 0], [1, 1, 0], [0, 0, 0], [1, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 4, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0.6, 1: 0.06666666666666667, 2: 0.13333333333333333, 3: 0.0, 4: 0.06666666666666667, 5: 0.13333333333333333}
+5 - sortear_andar_com_probabilidade() - 2
+- viajar_elevador() - Elevador vai do andar 4 para o andar 2.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 2, 'destino': None, 'estado': 1}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 36
+PREDIO - [[], [1, 0, 0], [1, 1, 0], [0, 0, 0], [1, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 2, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 1}
+5 - sortear_andar_com_probabilidade() - 0
+- viajar_elevador() - Elevador vai do andar 2 para o andar 0.
+- remover_pessoa_do_apartamento() - Pessoa removida do andar 2, apartamento 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 0, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 37
+PREDIO - [[], [1, 0, 0], [0, 1, 0], [0, 0, 0], [1, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 0, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0, 1: 0.13333333333333333, 2: 0.13333333333333333, 3: 0.2, 4: 0.13333333333333333, 5: 0.06666666666666667}
+5 - sortear_andar_com_probabilidade() - 3
+- viajar_elevador() - Elevador vai do andar 0 para o andar 3.
+- adicionar_pessoa_no_apartamento() - Pessoa alocada no andar 3, apartamento 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 3, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 38
+PREDIO - [[], [1, 0, 0], [0, 1, 0], [1, 0, 0], [1, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 3, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0.6, 1: 0.06666666666666667, 2: 0.06666666666666667, 3: 0.06666666666666667, 4: 0.06666666666666667, 5: 0.13333333333333333}
+5 - sortear_andar_com_probabilidade() - 5
+- viajar_elevador() - Elevador vai do andar 3 para o andar 5.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 5, 'destino': None, 'estado': 1}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 39
+PREDIO - [[], [1, 0, 0], [0, 1, 0], [1, 0, 0], [1, 0, 0], [1, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 5, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 1}
+5 - sortear_andar_com_probabilidade() - 0
+- viajar_elevador() - Elevador vai do andar 5 para o andar 0.
+- remover_pessoa_do_apartamento() - Pessoa removida do andar 5, apartamento 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 0, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 40
+PREDIO - [[], [1, 0, 0], [0, 1, 0], [1, 0, 0], [1, 0, 0], [0, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 0, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0, 1: 0.13333333333333333, 2: 0.13333333333333333, 3: 0.13333333333333333, 4: 0.13333333333333333, 5: 0.13333333333333333}
+5 - sortear_andar_com_probabilidade() - 3
+- viajar_elevador() - Elevador vai do andar 0 para o andar 3.
+- adicionar_pessoa_no_apartamento() - Pessoa alocada no andar 3, apartamento 1.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 3, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 41
+PREDIO - [[], [1, 0, 0], [0, 1, 0], [1, 1, 0], [1, 0, 0], [0, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 3, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0.6, 1: 0.06666666666666667, 2: 0.06666666666666667, 3: 0.13333333333333333, 4: 0.06666666666666667, 5: 0.06666666666666667}
+5 - sortear_andar_com_probabilidade() - 0
+- viajar_elevador() - Elevador vai do andar 3 para o andar 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 0, 'destino': None, 'estado': 1}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 42
+PREDIO - [[], [1, 0, 0], [0, 1, 0], [1, 1, 0], [1, 0, 0], [0, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 0, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0, 1: 0.13333333333333333, 2: 0.13333333333333333, 3: 0.06666666666666667, 4: 0.13333333333333333, 5: 0.13333333333333333}
+5 - sortear_andar_com_probabilidade() - 1
+- viajar_elevador() - Elevador vai do andar 0 para o andar 1.
+- adicionar_pessoa_no_apartamento() - Pessoa alocada no andar 1, apartamento 1.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 1, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 43
+PREDIO - [[], [1, 1, 0], [0, 1, 0], [1, 1, 0], [1, 0, 0], [0, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 1, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - permanecer
+PERMANCER
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 44
+PREDIO - [[], [1, 1, 0], [0, 1, 0], [1, 1, 0], [1, 0, 0], [0, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 1, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - permanecer
+PERMANCER
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 45
+PREDIO - [[], [1, 1, 0], [0, 1, 0], [1, 1, 0], [1, 0, 0], [0, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 1, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0.5333333333333333, 1: 0.13333333333333333, 2: 0.06666666666666667, 3: 0.13333333333333333, 4: 0.06666666666666667, 5: 0.06666666666666667}
+5 - sortear_andar_com_probabilidade() - 0
+- viajar_elevador() - Elevador vai do andar 1 para o andar 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 0, 'destino': None, 'estado': 1}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 46
+PREDIO - [[], [1, 1, 0], [0, 1, 0], [1, 1, 0], [1, 0, 0], [0, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 0, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0, 1: 0.06666666666666667, 2: 0.13333333333333333, 3: 0.06666666666666667, 4: 0.13333333333333333, 5: 0.13333333333333333}
+5 - sortear_andar_com_probabilidade() - 1
+- viajar_elevador() - Elevador vai do andar 0 para o andar 1.
+- adicionar_pessoa_no_apartamento() - Pessoa alocada no andar 1, apartamento 2.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 1, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 47
+PREDIO - [[], [1, 1, 1], [0, 1, 0], [1, 1, 0], [1, 0, 0], [0, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 1, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0.4666666666666667, 1: 0.2, 2: 0.06666666666666667, 3: 0.13333333333333333, 4: 0.06666666666666667, 5: 0.06666666666666667}
+5 - sortear_andar_com_probabilidade() - 0
+- viajar_elevador() - Elevador vai do andar 1 para o andar 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 0, 'destino': None, 'estado': 1}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 48
+PREDIO - [[], [1, 1, 1], [0, 1, 0], [1, 1, 0], [1, 0, 0], [0, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 0, 'destino': None, 'estado': 1}
+2 - calcular_probabilidade_movimento() - movimentar: 1, permanecer: 0
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0, 1: 0.0, 2: 0.13333333333333333, 3: 0.06666666666666667, 4: 0.13333333333333333, 5: 0.13333333333333333}
+5 - sortear_andar_com_probabilidade() - 2
+- viajar_elevador() - Elevador vai do andar 0 para o andar 2.
+- adicionar_pessoa_no_apartamento() - Pessoa alocada no andar 2, apartamento 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 2, 'destino': None, 'estado': 0}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RODADA 49
+PREDIO - [[], [1, 1, 1], [1, 1, 0], [1, 1, 0], [1, 0, 0], [0, 1, 0]]
+1 - simular_viagens() - {'andar_atual': 2, 'destino': None, 'estado': 0}
+2 - calcular_probabilidade_movimento() - movimentar: 0.5, permanecer: 0.5
+3 - sortear_movimento_com_probabilidade() - movimentar
+4 - probabilidade_movimento_por_andar() -  {0: 0.4, 1: 0.2, 2: 0.13333333333333333, 3: 0.13333333333333333, 4: 0.06666666666666667, 5: 0.06666666666666667}
+5 - sortear_andar_com_probabilidade() - 0
+- viajar_elevador() - Elevador vai do andar 2 para o andar 0.
+- viajar_elevador() - Estado do elevador após a viagem: {'andar_atual': 0, 'destino': None, 'estado': 1}.
+FIM DA RODADA
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+DADOS VIAGEM{0: [0, 3, 0], 1: [3, 0, 1], 2: [0, 5, 0], 3: [5, 0, 1], 4: [0, 1, 0], 5: [], 6: [1, 3, 1], 7: [3, 0, 0], 8: [0, 4, 0], 9: [], 10: [], 11: [], 12: [4, 5, 1], 13: [5, 0, 0], 14: [0, 2, 0], 15: [2, 4, 1], 16: [4, 0, 0], 17: [0, 5, 0], 18: [5, 0, 1], 19: [0, 5, 0], 20: [], 21: [5, 0, 1], 22: [0, 3, 0], 23: [3, 0, 1], 24: [0, 4, 0], 25: [4, 3, 1], 26: [3, 0, 0], 27: [0, 2, 0], 28: [], 29: [2, 4, 1], 30: [4, 0, 0], 31: [0, 4, 0], 32: [], 33: [], 34: [], 35: [4, 2, 1], 36: [2, 0, 0], 37: [0, 3, 0], 38: [3, 5, 1], 39: [5, 0, 0], 40: [0, 3, 0], 41: [3, 0, 1], 42: [0, 1, 0], 43: [], 44: [], 45: [1, 0, 1], 46: [0, 1, 0], 47: [1, 0, 1], 48: [0, 2, 0], 49: [2, 0, 1]}
